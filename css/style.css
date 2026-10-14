@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Outfit:wght@300;400;600;700&display=swap');
+
+:root {
+  --color-text: #1a1a1a;
+  --color-text-light: #555555;
+  --color-red: #d31b26; /* 画像の赤色に合わせたアクセントカラー */
+  --color-bg: #ffffff;
+  --color-gray-bg: #f9f9f9;
+  --font-ja: 'Noto Sans JP', sans-serif;
+  --font-en: 'Outfit', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-ja);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* -----------------------------
+   Hero & About Section
+----------------------------- */
+.hero-about-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 40px;
+  gap: 40px;
+}
+
+.content-left {
+  flex: 1 1 600px;
+}
+
+.content-right {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.main-copy {
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  margin-bottom: 40px;
+}
+
+.highlight-red {
+  color: var(--color-red);
+}
+
+.name-block {
+  display: flex;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.name-ja {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.name-divider {
+  margin: 0 16px;
+  font-size: 1.5rem;
+  color: #ccc;
+  font-weight: 300;
+}
+
+.name-en {
+  font-family: var(--font-en);
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.about-section .section-title {
+  font-family: var(--font-en);
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.about-meta {
+  font-size: 0.85rem;
+  color: var(--color-text-light);
+  margin-bottom: 24px;
+}
+
+.about-text p {
+  font-size: 0.95rem;
+  margin-bottom: 16px;
+  line-height: 1.8;
+}
+
+/* -----------------------------
+   Skills (画像の右側部分)
+----------------------------- */
+.skills-section {
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+.skills-title {
+  font-family: var(--font-en);
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.skills-list {
+  list-style: none;
+}
+
+.skills-list li {
+  display: flex;
+  align-items: center;
+  font-family: var(--font-en);
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.skill-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  color: white;
+  font-size: 0.7rem;
+  font-weight: bold;
+  margin-right: 12px;
+}
+
+.skill-icon.ux { background-color: #6fb6e8; }
+.skill-icon.ui { background-color: #4a4a4a; } /* Figma風 */
+.skill-icon.ai { background-color: #330000; color: #ff8c00; border: 1px solid #ff8c00; } /* Illustrator風 */
+.skill-icon.web { background-color: #e34f26; } /* HTML風 */
+.skill-icon.js { background-color: #f7df1e; color: #000; } /* JS風 */
+
+/* プロフィール写真プレースホルダー */
+.portrait-area {
+  width: 100%;
+  margin-top: auto;
+}
+.portrait-placeholder {
+  width: 100%;
+  padding-top: 100%; /* 正方形 */
+  background-color: var(--color-gray-bg);
+  border-radius: 12px;
+  background-image: url('../images/245021.png'); /* ここに実際の画像パスを設定 */
+  background-size: cover;
+  background-position: center bottom;
+}
+
+/* -----------------------------
+   共通セクションスタイル
+----------------------------- */
+.section-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 80px 40px;
+}
+
+.section-heading {
+  margin-bottom: 48px;
+}
+
+.eyebrow {
+  font-family: var(--font-en);
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  color: var(--color-red);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.section-heading h2 {
+  font-family: var(--font-en);
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-center .eyebrow {
+  justify-content: center;
+}
+
+/* -----------------------------
+   Profile List
+----------------------------- */
+.profile-list {
+  border-top: 1px solid #eee;
+}
+
+.profile-item {
+  display: flex;
+  padding: 24px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.profile-item dt {
+  font-family: var(--font-en);
+  font-weight: 600;
+  width: 200px;
+  color: var(--color-text-light);
+}
+
+.profile-item dd {
+  font-weight: 500;
+  flex: 1;
+}
+
+/* -----------------------------
+   Activities
+----------------------------- */
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 32px;
+}
+
+.activity-card {
+  background: var(--color-gray-bg);
+  padding: 40px 32px;
+  border-radius: 16px;
+  transition: transform 0.3s ease;
+}
+
+.activity-card:hover {
+  transform: translateY(-8px);
+}
+
+.activity-number {
+  font-family: var(--font-en);
+  font-size: 1.2rem;
+  color: var(--color-red);
+  font-weight: 700;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.activity-card h3 {
+  font-family: var(--font-en);
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+}
+
+.activity-card p {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+}
+
+/* -----------------------------
+   Vision & Contact
+----------------------------- */
+.vision h2 {
+  font-family: var(--font-en);
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 24px;
+}
+
+.vision-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.contact h2 {
+  font-family: var(--font-en);
+  font-size: 2.5rem;
+  margin-bottom: 24px;
+}
+
+.contact-text {
+  margin-bottom: 40px;
+}
+
+.contact-btn {
+  display: inline-block;
+  background-color: var(--color-text);
+  color: #fff;
+  text-decoration: none;
+  padding: 16px 40px;
+  border-radius: 50px;
+  font-family: var(--font-en);
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: var(--color-red);
+}
+
+/* -----------------------------
+   Responsive
+----------------------------- */
+@media (max-width: 768px) {
+  .main-copy { font-size: 2.5rem; }
+  .name-block { flex-direction: column; align-items: flex-start; gap: 8px; margin-bottom: 40px;}
+  .name-divider { display: none; }
+  .hero-about-wrapper { padding: 40px 20px; }
+  
+  .profile-item { flex-direction: column; gap: 8px; }
+  .profile-item dt { width: 100%; }
+  
+  .vision h2 { font-size: 2rem; }
+  .contact h2 { font-size: 2rem; }
+}
