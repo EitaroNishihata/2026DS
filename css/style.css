@@ -186,6 +186,7 @@ body {
   color: var(--color-red);
   margin-bottom: 8px;
   font-weight: 600;
+  text-align:left;
 }
 
 .section-heading h2 {
